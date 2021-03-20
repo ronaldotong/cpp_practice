@@ -82,7 +82,6 @@ public:
         uint32_t srcId,
         uint32_t targetId,
         std::stack<uint32_t>& path);
-    // To Do for Yuchen:
     int minTreeBuild();
 
 private:

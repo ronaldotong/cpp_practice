@@ -5,7 +5,9 @@ include(CTest)
 enable_testing()
 
 add_executable(cppbase main.cpp graph.hpp sort.hpp)
-target_link_libraries(cppbase m)
+IF (CMAKE_SYSTEM_NAME MATCHES "Linux")
+    target_link_libraries(cppbase m)
+ENDIF ()
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
